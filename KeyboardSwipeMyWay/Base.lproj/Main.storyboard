@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AKx-mw-X1H">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Textfield Swipe Up View Controller-->
+        <scene sceneID="LF1-Kz-cC9">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AKx-mw-X1H" customClass="TextfieldSwipeUpViewController" customModule="KeyboardSwipeMyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xgK-PM-VY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="7KR-OC-9ll"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="eIZ-w6-KOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-eL-qsz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixp-WW-PJt" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5I1-OS-YSg">
+                                                <rect key="frame" x="20" y="339" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXr-o4-Qpg">
+                                                <rect key="frame" x="20" y="377" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5u-V4-idf">
+                                                <rect key="frame" x="20" y="415" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5I1-OS-YSg" secondAttribute="trailing" constant="20" symbolic="YES" id="0rD-uG-7IU"/>
+                                            <constraint firstItem="l5u-V4-idf" firstAttribute="leading" secondItem="5I1-OS-YSg" secondAttribute="leading" id="2dr-jJ-mJf"/>
+                                            <constraint firstItem="jXr-o4-Qpg" firstAttribute="top" secondItem="5I1-OS-YSg" secondAttribute="bottom" constant="8" symbolic="YES" id="BHj-QW-3ZF"/>
+                                            <constraint firstItem="5I1-OS-YSg" firstAttribute="centerY" secondItem="Ixp-WW-PJt" secondAttribute="centerY" constant="20" id="Exv-pr-Y7m"/>
+                                            <constraint firstItem="l5u-V4-idf" firstAttribute="top" secondItem="jXr-o4-Qpg" secondAttribute="bottom" constant="8" symbolic="YES" id="UEI-5r-jvm"/>
+                                            <constraint firstItem="l5u-V4-idf" firstAttribute="trailing" secondItem="5I1-OS-YSg" secondAttribute="trailing" id="bnQ-nd-vRp"/>
+                                            <constraint firstItem="5I1-OS-YSg" firstAttribute="leading" secondItem="Ixp-WW-PJt" secondAttribute="leading" constant="20" symbolic="YES" id="f9b-aE-edI"/>
+                                            <constraint firstItem="jXr-o4-Qpg" firstAttribute="leading" secondItem="5I1-OS-YSg" secondAttribute="leading" id="kMu-We-a7G"/>
+                                            <constraint firstItem="jXr-o4-Qpg" firstAttribute="trailing" secondItem="5I1-OS-YSg" secondAttribute="trailing" id="xRc-EN-3Lx"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="l5u-V4-idf" secondAttribute="bottom" constant="20" symbolic="YES" id="ya3-FU-on5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cU2-fh-UI1" appends="YES" id="te0-3t-Kfs"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ixp-WW-PJt" firstAttribute="top" secondItem="iOw-eL-qsz" secondAttribute="top" id="5tD-Km-0bC"/>
+                                    <constraint firstItem="Ixp-WW-PJt" firstAttribute="leading" secondItem="iOw-eL-qsz" secondAttribute="leading" id="Ke0-m0-G07"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ixp-WW-PJt" secondAttribute="bottom" id="VX2-nq-uOf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ixp-WW-PJt" secondAttribute="trailing" id="rIn-NK-7kO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ixp-WW-PJt" firstAttribute="height" secondItem="eIZ-w6-KOB" secondAttribute="height" priority="250" id="CJO-DV-TZp"/>
+                            <constraint firstItem="7KR-OC-9ll" firstAttribute="top" secondItem="iOw-eL-qsz" secondAttribute="bottom" id="NFn-xP-Bgo"/>
+                            <constraint firstAttribute="trailing" secondItem="iOw-eL-qsz" secondAttribute="trailing" id="WaQ-15-MC4"/>
+                            <constraint firstItem="Ixp-WW-PJt" firstAttribute="width" secondItem="eIZ-w6-KOB" secondAttribute="width" id="nAz-Qg-arl"/>
+                            <constraint firstItem="iOw-eL-qsz" firstAttribute="top" secondItem="xgK-PM-VY8" secondAttribute="bottom" id="q3U-F6-Gkr"/>
+                            <constraint firstItem="iOw-eL-qsz" firstAttribute="leading" secondItem="eIZ-w6-KOB" secondAttribute="leading" id="zYs-CG-WJf"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="iOw-eL-qsz" id="MJk-aA-KRG"/>
+                        <outlet property="textfield_1" destination="5I1-OS-YSg" id="QkP-ep-l16"/>
+                        <outlet property="textfield_2" destination="jXr-o4-Qpg" id="oNq-EF-ebe"/>
+                        <outlet property="textfield_3" destination="l5u-V4-idf" id="41X-G9-bpp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUm-3c-6Fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cU2-fh-UI1">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="AKx-mw-X1H" id="4s7-qt-g7h"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="842" y="155"/>
         </scene>
     </scenes>
 </document>
