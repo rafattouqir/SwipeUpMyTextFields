@@ -19,8 +19,8 @@ class TextfieldSwipeUpViewController: UIViewController {
     }
     
     func dispatchTimeInSecond(delayInSeconds seconds:Double = 0.0) -> dispatch_time_t{
-            return dispatch_time(DISPATCH_TIME_NOW,
-                                 Int64(seconds * Double(NSEC_PER_SEC)))
+        return dispatch_time(DISPATCH_TIME_NOW,
+                             Int64(seconds * Double(NSEC_PER_SEC)))
     }
     
     @IBOutlet weak var textfield_1: UITextField!
