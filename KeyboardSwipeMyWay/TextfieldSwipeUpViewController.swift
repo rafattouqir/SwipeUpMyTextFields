@@ -31,8 +31,8 @@ class TextfieldSwipeUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        //MARK :- this delegation is required for textfield
         textfield_1.delegate = self
         textfield_2.delegate = self
         textfield_3.delegate = self
@@ -52,7 +52,7 @@ class TextfieldSwipeUpViewController: UIViewController {
     
 }
 
-
+//MARK :- MY KEYBOARD SWIPE UP EXTENSION
 extension TextfieldSwipeUpViewController:UITextFieldDelegate{
     
     //App related delegate implementation here
@@ -64,7 +64,7 @@ extension TextfieldSwipeUpViewController:UITextFieldDelegate{
         case textfield_2:
             textfield_3.becomeFirstResponder()
         case textfield_3:
-            textfield_3.resignFirstResponder()
+            textField.resignFirstResponder()
         default:
             break
         }
